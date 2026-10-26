@@ -17,8 +17,21 @@ a{
 }
 
 header{
-	padding: -5px 0;
-	background-color: #514039;
+	padding: 16px;
+	background: linear-gradient(rgba(37, 24, 16, 0.35), rgba(37, 24, 16, 0.35)),
+		url("images/header-sunset.jpg") center 48% / cover no-repeat;
+}
+
+.photo-credit{
+	display: block;
+	margin: 0;
+	color: #f0d5bd;
+	font-size: 12px;
+	text-align: center;
+}
+
+.photo-credit a{
+	color: inherit;
 }
 
 h1, h2{
