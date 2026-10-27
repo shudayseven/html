@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;700&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     font-size: 100%;
@@ -21,10 +23,86 @@ a {
 }
 
 header {
-    padding: 16px 16px 0;
-    min-height: 80px;
-    background: linear-gradient(rgba(37, 24, 16, 0.35), rgba(37, 24, 16, 0.35)),
+    position: relative;
+    min-height: 320px;
+    background: linear-gradient(rgba(27, 18, 16, 0.28), rgba(27, 18, 16, 0.42)),
         url("images/header-sunset.jpg") center 48% / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.28));
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero-title,
+.hero-subtitle {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
+    line-height: 0.9;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin-top: 0.2em;
+    font-weight: 500;
+}
+
+.hero-text--variant-1 .hero-title,
+.hero-text--variant-1 .hero-subtitle {
+    background: linear-gradient(135deg, #f8ebdc 0%, #e3d0bd 32%, #d8cab9 50%, #f5e5d5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text--variant-2 {
+    padding: 32px 42px;
+    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(39, 20, 17, 0.16);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.08), inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+.hero-text--variant-2 .hero-title,
+.hero-text--variant-2 .hero-subtitle {
+    background: linear-gradient(135deg, #fff3e8 0%, #f0d7bf 20%, #d9b796 50%, #f9eddc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-text--variant-2 .hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.hero-text--variant-2 .hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.16em;
 }
 
 .photo-credit {
