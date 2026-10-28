@@ -24,7 +24,7 @@ a {
 
 header {
     position: relative;
-    min-height: 320px;
+    min-height: 250px;
     background: linear-gradient(rgba(27, 18, 16, 0.28), rgba(27, 18, 16, 0.42)),
         url("images/header-sunset.jpg") center 48% / cover no-repeat;
     display: flex;
